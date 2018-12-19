@@ -1,7 +1,6 @@
 import time
 import sys
 import urllib, json
-import threading
 import requests
 from urllib.request import urlopen
 
