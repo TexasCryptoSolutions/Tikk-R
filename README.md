@@ -9,3 +9,4 @@ Refresh Rate
 #time.sleep(5.0)
 This controls the speed at which Tikk-R does JSON API Request. 
 
+![alt text](http://www.terrorsoundz.com/Preview.png)
