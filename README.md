@@ -17,12 +17,18 @@ This controls the speed at which Tikk-R does JSON API Request.
 
 Ticker Symbol Definitions 
   #BTC-XMR
-  val = json_obj['result'][198]['Bid']
-  mknm = json_obj['result'][198]['MarketName']
-  h1 = json_obj['result'][198]['High']
-  l1 = json_obj['result'][198]['Low']
-  las = json_obj['result'][198]['Last']
-  oords = json_obj['result'][198]['OpenBuyOrders']
+  val = json_obj['result'][198]['Bid'] 
+  
+  mknm = json_obj['result'][198]['MarketName'] 
+  
+  h1 = json_obj['result'][198]['High'] 
+  
+  l1 = json_obj['result'][198]['Low'] 
+  
+  las = json_obj['result'][198]['Last'] 
+  
+  oords = json_obj['result'][198]['OpenBuyOrders'] 
+  
   
   These values are requested via Json API. 
   "Link for more info"
