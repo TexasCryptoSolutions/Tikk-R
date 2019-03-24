@@ -15,25 +15,20 @@ This controls the speed at which Tikk-R does REST API.
 
 
   These values are requested via Json API. 
-  "Link for more info"
-  https://bittrex.github.io/api/v1-1
+  "Link for more info"  
+  https://bittrex.github.io/api/v1-1  
   
-  Update 3-24-2019
-  -Simplified command line interface
-  -Added color support
+  Update 3-24-2019  
+  -Simplified command line interface  
+  -Added color support  
   
   
-----------Libs Used----------
+----------Libs Used----------  
 
-import time
-
-import sys
-
-import urllib, json
-
-import requests
-
-from termcolor import colored
-
-from urllib.request import urlopen
+import time  
+import sys  
+import urllib, json  
+import requests  
+from termcolor import colored  
+from urllib.request import urlopen  
   
