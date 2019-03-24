@@ -5,11 +5,11 @@ JSON
 By default the code is pointed towards the bittrex public API. 
 "https://api.bittrex.com/api/v1.1/public/getmarketsummary?market="
 
-Example :   user@user:~\$ python3 Tikk-r.py BTC XMR
+Example :   user@user:~\$ python3 Tikk-r.py BTC XMR  
 
-Refresh Rate
-#time.sleep(5.0)
-This controls the speed at which Tikk-R does REST API. 
+Refresh Rate  
+#time.sleep(5.0)  
+This controls the speed at which Tikk-R does REST API.   
 
 ![alt text](http://www.terrorsoundz.com/Preview.png)
 
