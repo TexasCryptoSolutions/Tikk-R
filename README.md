@@ -26,9 +26,14 @@ This controls the speed at which Tikk-R does REST API.
 ----------Libs Used----------
 
 import time
+
 import sys
+
 import urllib, json
+
 import requests
+
 from termcolor import colored
+
 from urllib.request import urlopen
   
