@@ -15,10 +15,12 @@ coin = str(sys.argv[1])
 coin1 = str(sys.argv[2])
 
 if len(sys.argv) == 1:
-  print("Please input two 3 Letter coin names EX: python3 tickk-r.py BTC XMR ")
+  print("Please input two 3 Letter Coin Names")
   quit()
 
 value = str(coin) + str(coin1)
+prevVal = '0'
+
 
 while True:
 
@@ -26,7 +28,6 @@ while True:
   url = 'https://api.bittrex.com/api/v1.1/public/getmarketsummary?market=' + coin + '-' + coin1
   response = urlopen(url)
   json_obj = json.loads(response.read())
-
   	
   #BTC-XMR
   val = json_obj['result'][0]['Bid']
@@ -35,6 +36,10 @@ while True:
   l1 = colored(json_obj['result'][0]['Low'], 'red')
   las = json_obj['result'][0]['Last']
   oords = colored(json_obj['result'][0]['OpenBuyOrders'], 'magenta')
+  
+  VAL1 = float(json_obj['result'][0]['Bid'])
+  H1 = float(json_obj['result'][0]['Last'])
+  L1 = float(json_obj['result'][0]['Ask'])
 
 
 #convert Data to strings
@@ -54,15 +59,24 @@ while True:
   g = format(val  , '.8f')
   lst2 = format(las , '.9f')
   g2 = format(val  , '.9f')
+
+
 #     print time in 24HR
   timestamp = colored(time.strftime('%H:%M:%S'), 'red')
+  NoColorTimeStamp = time.strftime('%H:%M:%S')
 
-  print(mknm,": " +g,"High: " +h,"Low: " +l,"Last: " +lst,"Time: " +timestamp,"Open BUY Orders: " +obo, end = "\n")    
-
-
+  print(mknm,": " +g,"High: " +h,"Low: " +l,"Last: " +lst,"Time: " +timestamp,"Open BUY Orders: " +obo, end = "\n")
+  
+  with open('Tikk-RData.txt', 'a') as the_file:
+    FinS = str([NoColorTimeStamp, VAL1, H1, L1])
+    FinS = FinS[1:-1] + '\n'
+    the_file.writelines(FinS)
+    the_file.close()
+  time.sleep(10)
 #clear Terminal 
   sys.stdout.flush()
   sys.stdout.write(CURSOR_UP_ONE)
   sys.stdout.write(ERASE_LINE)
-#Loop Reload Time
-time.sleep(0.1)
+
+
+prevVal = g
